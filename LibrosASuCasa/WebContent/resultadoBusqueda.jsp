@@ -1,4 +1,5 @@
 <%@ page import="java.util.*" %>
+<%@ page import ="modelo.*" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,17 +12,24 @@
         <p>
         
         <ul>
-        	la conexion esta de puta madre
         	<br>
-        	${titulo}
+        	<%
+        	ColLibros busquedaLibros = (ColLibros) request.getAttribute("libros");
+        	for ( Libro libro : busquedaLibros.getLibros() ){
+        		out.print("<br>"+libro.getTitulo());
+        	}
+        	 %>
         	
-        	${libros.libros[0].nombre}
+        	<!--   <c:forEach items="${list}" var="libros">
+        	<li>$libros.titulo</li>
+        	</c:forEach> -->
+        	<!--  ${libros.libros[0].titulo}  -->
         	
         	
         	
-        	<c:forEach var="libros" items="${libros.libros}">
-        		<li>${nombre}<li>
-        	</c:forEach>
+        	<!--   <c:forEach var="libros" items="${libros.libros}"> 
+        		<li>${titulo}<li>
+        	</c:forEach> -->
         </ul>
 
         </p>
