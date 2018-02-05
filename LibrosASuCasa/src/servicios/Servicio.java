@@ -8,4 +8,7 @@ public class Servicio implements InterfaceServicio{
 	public ColLibros BuscarTitulo(String string){
 		return datos.BuscarTitulo(string);
 	}
+
+	public ColLibros BuscarAutor(String string){
+		return datos.BuscarAutor(string);
 }
