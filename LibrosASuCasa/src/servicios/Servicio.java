@@ -11,4 +11,4 @@ public class Servicio implements InterfaceServicio{
 
 	public ColLibros BuscarAutor(String string){
 		return datos.BuscarAutor(string);
-}
+}}

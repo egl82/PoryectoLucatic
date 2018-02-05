@@ -5,25 +5,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class ColLibros {
-	private List<Libro> libros;
+public class ColLibros<cosa> {
+	private List<cosa> libros;
 	
 
-	public List<Libro> getLibros() {
+	public List<cosa> getLibros() {
 		return libros;
 	}
 
-	public void setLibros(List<Libro> libros) {
+	public void setLibros(List<cosa> libros) {
 		this.libros = libros;
 	}
 	
 	
 	public ColLibros() {
-		List<Object> libros = new ArrayList<>();
+		this.libros = new ArrayList<>();
 	}
 	
-	public void add(Libro libro){
-		libros.add(libro);
+	public void add(cosa libro){
+		this.libros.add(libro);
 	}
 	
 	

@@ -46,8 +46,6 @@ public class Menu extends HttpServlet {
 			
 			
 			ColLibros libros=serv.BuscarTitulo(request.getParameter("lib_titulo"));
-			String titulo=request.getParameter("lib_titulo");
-			request.setAttribute("titulo", titulo);
 	/*
 			 * //-------------------------------------- // Paso 2 // - Hablar
 			 * con el "Experto" y buscar en BBDDD // - Recoger información // -
