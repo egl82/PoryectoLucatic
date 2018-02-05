@@ -13,7 +13,25 @@ public class Datos implements InterfaceDatos {
 	private static final String BDDNAME = "librosasucasa";
 	private static final String NOSSL = "?autoReconnect=true&useSSL=false";
 	
+	public void conectar(){
+		Connection conex = null;
+		Statement st = null;
+		ResultSet rs = null;
+		String driverClassName = "com.mysql.jdbc.Driver";
+		String driverUrl = "jdbc:mysql://localhost/"+BDDNAME+NOSSL;
+		String user = "root";
+		String paswd = "1111";
+		ColLibros librosDeBusqueda = new ColLibros ();
+	}
+	
 	public ColLibros BuscarAutor(String busqueda){
+		
+		
+		
+		
+		
+		
+		
 		ColLibros a=new ColLibros();
 		return  a;
 	}
@@ -29,7 +47,7 @@ public class Datos implements InterfaceDatos {
 		String user = "root";
 		String paswd = "1111";
 		ColLibros librosDeBusqueda = new ColLibros ();
-		String query = "SELECT idLibros, isbn, titulo, descripcion, sinopsis, cantidad, precio FROM "+BDDNAME+".libros WHERE titulo LIKE '"+busqueda+"';";
+		String query = "SELECT idLibros, isbn, titulo, descripcion, sinopsis, cantidad, precio FROM "+BDDNAME+".libros WHERE titulo LIKE '%"+busqueda+"%';";
 		try{
 			Class.forName(driverClassName);
 			conex = DriverManager.getConnection(driverUrl, user, paswd);

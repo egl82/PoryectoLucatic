@@ -10,13 +10,14 @@
        <h1>RESULTADOS LIBROS</h1>
        <p>Titulo seleccionado: </p>
         <p>
-        
+       	 ${libros.libros[0].titulo}
         <ul>
         	<br>
         	<%
         	ColLibros busquedaLibros = (ColLibros) request.getAttribute("libros");
         	for ( Libro libro : busquedaLibros.getLibros() ){
         		out.print("<br>"+libro.getTitulo());
+        		out.print("<br>"+libro.getIsbn());
         	}
         	 %>
         	
